@@ -4,18 +4,18 @@ import Sidebar from "./components/Sidebar";
 
 export default function Home() {
   return (
-    <div>
-      <div className="root"></div>
-
-
-      <div className="flex flex-col">
-        <Header/>
-        <main className="flex mt-12">
-          <Sidebar/>
-          <div className="w-[85%] h-screen ml-[15%]">Tu beda informacje</div>
-        </main>
-        <Footer/>
+      <div>
+          <div className="root"></div>
+          <div className="flex flex-col ">
+            <Header/>
+            <main className="flex mt-12">
+              <Sidebar/>
+              <div className="w-[85%] h-screen ml-[15%] text-black bg-white dark:bg-[#0E1111] dark:text-[#EAEAEA]">
+                  <h1>Tu beda informacje</h1>
+              </div>
+            </main>
+          </div>
+              <Footer/>
       </div>
-    </div>
   );
 }

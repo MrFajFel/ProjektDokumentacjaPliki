@@ -1,11 +1,31 @@
+import Link from "next/link";
+import Image from "next/image";
+
 export default function Header(){
     return(
-        <header className="fixed h-12 w-full ">
-            <div className="flex justify-between h-full">
-                <div className="w-fit m-2"> Logo </div>
-                <div className="fit m-2">
-                     Tu bedzie Header
-                    <button>Guzik</button>
+        <header className="fixed h-12 w-full bg-white border-gray-300 dark:bg-[#0E1111] dark:text-[#EAEAEA] border-b-2 dark:border-[#1E1E1E]">
+            <div className="flex justify-between">
+                <div className="w-fit m-2">
+                    <Link href="/">Logo</Link>
+                </div>
+                <div className="fit m-2 flex h-full justify-center">
+                    <Link className="ml-6 text-center" href="/">Doc</Link>
+                    <Link className="ml-6 h-full" href="">Smth</Link>
+                    <Link className="ml-6 text-center" href="">Donate</Link>
+                    <button className="cursor-pointer ml-6 h-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="full" viewBox="0 0 24 24" strokeWidth="1.5"
+                             stroke="currentColor" className="size-6">
+                            <path strokeLinecap="round" strokeLinejoin="round"
+                                  d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"/>
+                        </svg>
+
+                        {/*słoneczko:*/}
+                        {/*<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"*/}
+                        {/*     stroke="currentColor" className="size-6">*/}
+                        {/*    <path stroke-linecap="round" stroke-linejoin="round"*/}
+                        {/*          d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"/>*/}
+                        {/*</svg>*/}
+                    </button>
                 </div>
             </div>
         </header>
