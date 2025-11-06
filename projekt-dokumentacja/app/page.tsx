@@ -1,3 +1,4 @@
+'use client';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
@@ -14,7 +15,7 @@ export default function Home() {
               <div className="w-[85%] h-screen ml-[15%] text-black bg-white dark:bg-[#0E1111]
                dark:text-[#EAEAEA]">
 
-                  <h1 id="Wstep" className=" mt-10 ml-5 font-bold  text-gray-500  dark:text-shadow-black dark:text-shadow-sm">
+                  <h1 id="wstep" className=" scroll-mt-12 mt-10 ml-5 font-bold  text-gray-500  dark:text-shadow-black dark:text-shadow-sm">
                       WSTĘP
                   </h1>
 

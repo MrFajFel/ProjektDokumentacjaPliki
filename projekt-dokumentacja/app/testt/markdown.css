@@ -1,0 +1,269 @@
+
+/* Akapity */
+& p {
+  font-size: 1em;
+  line-height: 1.6;
+  margin: 1em 0;
+}
+
+& big {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Nagłówki */
+& h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+& h2 {
+  font-size: 1.75em;
+  margin: 0.5em 0;
+}
+
+& h3 {
+  font-size: 1.5em;
+  margin: 0.67em 0;
+}
+
+& h4 {
+  font-size: 1.25em;
+  margin: 0.83em 0;
+}
+
+& h5 {
+  font-size: 1em;
+  margin: 1.12em 0;
+}
+
+& h6 {
+  font-size: 0.75em;
+  margin: 1em 0;
+}
+
+/* Pogrubienie, kursywa, podkreślenie, przekreślenie, wstawienie, mały tekst */
+& b, & strong {
+  font-weight: bold;
+}
+
+& i, & em {
+  font-style: italic;
+}
+
+& u, & ins {
+  text-decoration: underline;
+}
+
+& s, & del {
+  text-decoration: line-through;
+}
+
+/* Fragmenty kodu */
+& code {
+  font-family: monospace;
+  background-color: #0F1214!important;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 1.025em;
+}
+
+& pre {
+  background-color: #0F1214!important;
+  border: 2px solid #1E2226;
+  color: #fff;
+  padding: 1em;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+& pre code {
+  background: none;
+  padding: 0;
+}
+
+/* Linki */
+& a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+& a:hover {
+  text-decoration: underline;
+}
+
+/* Linie poziome */
+& hr {
+  border-top: 1px solid #2d3239;
+  margin: 2em 0;
+}
+
+/* Listy */
+& ul {
+  list-style-type: disc;
+}
+
+& ol {
+  list-style-type: decimal;
+}
+
+& ul, & ol {
+  margin: 1em 0;
+  padding-left: 2em;
+}
+
+& li {
+  margin: 0.5em 0;
+}
+
+& ul li::marker {
+  color: #3A3F44;
+}
+
+& ol li::marker {
+  color: #464d53;
+}
+
+/* Tabele */
+& table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+& th, & td {
+  border: 1px solid #2d3239;
+  padding: 0.5em 1em;
+  text-align: left;
+}
+
+& th {
+  background-color: #1A1E21;
+}
+
+/* Inne elementy tekstowe */
+& kbd {
+  font-family: monospace;
+  font-size: 1.025em;
+  background-color: #1E2226;
+  border: 1px solid #2d3239;
+  border-radius: 3px;
+  padding: 0.1em 0.3em;
+}
+
+& blockquote {
+  border-left: 4px solid #2d3239;
+  margin: 1.5em 0;
+  padding: 0.5em 1em;
+  color: #ccc;
+  background-color: #1A1E21;
+  border-radius: 4px;
+  font-style: italic;
+}
+
+/* Przyciski i input[type=submit] */
+& button, 
+& input[type="submit"] {
+  background-color: #1E2226;
+  color: #fff;
+  border: 1px solid #2d3239;
+  padding: 0.5em 1em;
+  margin: 0.5em 0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+& button:hover, 
+& input[type="submit"]:hover {
+  background-color: #2d3239;
+  border-color: #3A3F44;
+}
+
+& button:active, 
+& input[type="submit"]:active {
+  background-color: #0F1214;
+}
+
+& button:disabled,
+& input[type="submit"]:disabled {
+  background-color: #1E2226;
+  border-color: #2d3239;
+  color: #666;
+  cursor: not-allowed;
+}
+
+/* Pola tekstowe, textarea, select */
+& input[type="text"],
+& input[type="password"],
+& input[type="email"],
+& textarea,
+& select {
+  background-color: #0F1214;
+  color: #fff;
+  border: 1px solid #2d3239;
+  border-radius: 4px;
+  padding: 0.5em;
+  line-height: 1.4;
+  margin: 0.5em 0;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* & input[type="text"]:focus,
+& input[type="password"]:focus,
+& input[type="email"]:focus,
+& textarea:focus,
+& select:focus {
+  border-color: #0077cc;
+  outline: none;
+} */
+
+& input[type="text"]:disabled,
+& input[type="password"]:disabled,
+& input[type="email"]:disabled,
+& textarea:disabled,
+& select:disabled {
+  background-color: #0F1214;
+  border-color: #2d3239;
+  color: #666;
+  cursor: not-allowed;
+}
+
+/* Checkbox i radio */
+& input[type="checkbox"],
+& input[type="radio"] {
+  accent-color: #0077cc; /* nowoczesne przeglądarki */
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
+  margin: 0.75em 0;
+}
+
+& input[type="checkbox"]:disabled,
+& input[type="radio"]:disabled {
+  accent-color: #666;
+  cursor: not-allowed;
+}
+
+/* Labelki */
+& label {
+  color: #ccc;
+  margin-right: 0.5em;
+  user-select: none;
+}
+
+/* Select – poprawki dla spójności */
+& select {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, #ccc 50%),
+                    linear-gradient(135deg, #ccc 50%, transparent 50%);
+  background-position: right 1.1em top 50%, right 0.6em top 50%;
+  background-size: 0.5em 0.5em;
+  background-repeat: no-repeat;
+  padding-right: 1.5em;
+}
+
+

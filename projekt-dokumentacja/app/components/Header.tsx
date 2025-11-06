@@ -11,7 +11,9 @@ export default function Header(){
         <header className='fixed h-12 w-full bg-white border-gray-300  dark:bg-[#0E1111] dark:text-[#EAEAEA] border-b-2 dark:border-[#1E1E1E]'>
             <div className="flex justify-between">
                 <div className="w-fit m-2">
-                    <Link href="/">Logo</Link>
+                    <Link href="/">
+                        <Image src="/LogoV1.png" alt="Logo" width={50} height={20} />
+                    </Link>
                 </div>
                 <div className="fit m-2 flex h-full justify-center">
                     <Link className="mr-6 text-center flex" href="/">

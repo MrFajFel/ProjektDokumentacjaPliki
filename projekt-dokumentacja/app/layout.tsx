@@ -15,6 +15,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Linux Documentation",
   description: "Linux Documentation made by FiFi",
+   icons: {
+    icon: '/favicon.png',        // favicon dla przeglądarki
+    shortcut: '/favicon.png',    // ikona skrótu
+    apple: '/favicon.png',       // ikona dla iPhone/iPad
+  },
 };
 
 export default function RootLayout({
