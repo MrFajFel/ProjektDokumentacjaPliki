@@ -1,75 +1,78 @@
-
 /* Akapity */
-& p {
+.components p {
   font-size: 1em;
   line-height: 1.6;
   margin: 1em 0;
 }
 
-& big {
+.components big {
   font-size: 1.1em;
   line-height: 1.6;
 }
 
 /* Nagłówki */
-& h1 {
+.components h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
-& h2 {
+.components h2 {
   font-size: 1.75em;
   margin: 0.5em 0;
 }
 
-& h3 {
+.components h3 {
   font-size: 1.5em;
   margin: 0.67em 0;
 }
 
-& h4 {
+.components h4 {
   font-size: 1.25em;
   margin: 0.83em 0;
 }
 
-& h5 {
+.components h5 {
   font-size: 1em;
   margin: 1.12em 0;
 }
 
-& h6 {
+.components h6 {
   font-size: 0.75em;
   margin: 1em 0;
 }
 
 /* Pogrubienie, kursywa, podkreślenie, przekreślenie, wstawienie, mały tekst */
-& b, & strong {
+.components b,
+.components strong {
   font-weight: bold;
 }
 
-& i, & em {
+.components i,
+.components em {
   font-style: italic;
 }
 
-& u, & ins {
+.components u,
+.components ins {
   text-decoration: underline;
 }
 
-& s, & del {
+.components s,
+.components del {
   text-decoration: line-through;
 }
 
 /* Fragmenty kodu */
-& code {
+.components code {
   font-family: monospace;
-  background-color: #0F1214!important;
+  background-color: #0F1214 !important;
   padding: 0.2em 0.4em;
   border-radius: 3px;
   font-size: 1.025em;
 }
 
-& pre {
-  background-color: #0F1214!important;
+.components pre {
+  background-color: #0F1214 !important;
   border: 2px solid #1E2226;
   color: #fff;
   padding: 1em;
@@ -77,72 +80,74 @@
   overflow-x: auto;
 }
 
-& pre code {
+.components pre code {
   background: none;
   padding: 0;
 }
 
 /* Linki */
-& a {
+.components a {
   color: #0077cc;
   text-decoration: none;
 }
 
-& a:hover {
+.components a:hover {
   text-decoration: underline;
 }
 
 /* Linie poziome */
-& hr {
+.components hr {
   border-top: 1px solid #2d3239;
   margin: 2em 0;
 }
 
 /* Listy */
-& ul {
+.components ul {
   list-style-type: disc;
 }
 
-& ol {
+.components ol {
   list-style-type: decimal;
 }
 
-& ul, & ol {
+.components ul,
+.components ol {
   margin: 1em 0;
   padding-left: 2em;
 }
 
-& li {
+.components li {
   margin: 0.5em 0;
 }
 
-& ul li::marker {
+.components ul li::marker {
   color: #3A3F44;
 }
 
-& ol li::marker {
+.components ol li::marker {
   color: #464d53;
 }
 
 /* Tabele */
-& table {
+.components table {
   width: 100%;
   border-collapse: collapse;
   margin: 1em 0;
 }
 
-& th, & td {
+.components th,
+.components td {
   border: 1px solid #2d3239;
   padding: 0.5em 1em;
   text-align: left;
 }
 
-& th {
+.components th {
   background-color: #1A1E21;
 }
 
 /* Inne elementy tekstowe */
-& kbd {
+.components kbd {
   font-family: monospace;
   font-size: 1.025em;
   background-color: #1E2226;
@@ -151,7 +156,7 @@
   padding: 0.1em 0.3em;
 }
 
-& blockquote {
+.components blockquote {
   border-left: 4px solid #2d3239;
   margin: 1.5em 0;
   padding: 0.5em 1em;
@@ -162,8 +167,8 @@
 }
 
 /* Przyciski i input[type=submit] */
-& button, 
-& input[type="submit"] {
+.components button,
+.components input[type="submit"] {
   background-color: #1E2226;
   color: #fff;
   border: 1px solid #2d3239;
@@ -175,19 +180,19 @@
   transition: background-color 0.2s, border-color 0.2s;
 }
 
-& button:hover, 
-& input[type="submit"]:hover {
+.components button:hover,
+.components input[type="submit"]:hover {
   background-color: #2d3239;
   border-color: #3A3F44;
 }
 
-& button:active, 
-& input[type="submit"]:active {
+.components button:active,
+.components input[type="submit"]:active {
   background-color: #0F1214;
 }
 
-& button:disabled,
-& input[type="submit"]:disabled {
+.components button:disabled,
+.components input[type="submit"]:disabled {
   background-color: #1E2226;
   border-color: #2d3239;
   color: #666;
@@ -195,11 +200,11 @@
 }
 
 /* Pola tekstowe, textarea, select */
-& input[type="text"],
-& input[type="password"],
-& input[type="email"],
-& textarea,
-& select {
+.components input[type="text"],
+.components input[type="password"],
+.components input[type="email"],
+.components textarea,
+.components select {
   background-color: #0F1214;
   color: #fff;
   border: 1px solid #2d3239;
@@ -212,20 +217,20 @@
   box-sizing: border-box;
 }
 
-/* & input[type="text"]:focus,
-& input[type="password"]:focus,
-& input[type="email"]:focus,
-& textarea:focus,
-& select:focus {
+/* .components input[type="text"]:focus,
+.components input[type="password"]:focus,
+.components input[type="email"]:focus,
+.components textarea:focus,
+.components select:focus {
   border-color: #0077cc;
   outline: none;
 } */
 
-& input[type="text"]:disabled,
-& input[type="password"]:disabled,
-& input[type="email"]:disabled,
-& textarea:disabled,
-& select:disabled {
+.components input[type="text"]:disabled,
+.components input[type="password"]:disabled,
+.components input[type="email"]:disabled,
+.components textarea:disabled,
+.components select:disabled {
   background-color: #0F1214;
   border-color: #2d3239;
   color: #666;
@@ -233,30 +238,30 @@
 }
 
 /* Checkbox i radio */
-& input[type="checkbox"],
-& input[type="radio"] {
-  accent-color: #0077cc; /* nowoczesne przeglądarki */
+.components input[type="checkbox"],
+.components input[type="radio"] {
+  accent-color: #0077cc;
   width: 1em;
   height: 1em;
   cursor: pointer;
   margin: 0.75em 0;
 }
 
-& input[type="checkbox"]:disabled,
-& input[type="radio"]:disabled {
+.components input[type="checkbox"]:disabled,
+.components input[type="radio"]:disabled {
   accent-color: #666;
   cursor: not-allowed;
 }
 
 /* Labelki */
-& label {
+.components label {
   color: #ccc;
   margin-right: 0.5em;
   user-select: none;
 }
 
 /* Select – poprawki dla spójności */
-& select {
+.components select {
   appearance: none;
   background-image: linear-gradient(45deg, transparent 50%, #ccc 50%),
                     linear-gradient(135deg, #ccc 50%, transparent 50%);
@@ -265,5 +270,3 @@
   background-repeat: no-repeat;
   padding-right: 1.5em;
 }
-
-
