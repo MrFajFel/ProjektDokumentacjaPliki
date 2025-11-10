@@ -1,5 +1,8 @@
 import "@/app/markdown.css";
 
+
+# *Dokumentacja posaida jedynie komendy postawione na dystrybucjach **Debiana m.in. Ubuntu oraz Linux Mint.***
+
 <div
   id="wstep"
   className="scroll-mt-12 mt-10 ml-5 font-bold text-gray-500 dark:text-shadow-black dark:text-shadow-sm">
@@ -130,18 +133,261 @@ className="ml-4 mt-10 scroll-mt-12">
 
 🔴 **CentOS** / Rocky Linux / AlmaLinux – dystrybucje oparte na Red Hat Enterprise Linux (RHEL), cenione w środowiskach serwerowych i korporacyjnych. Zapewniają stabilność i długoterminowe wsparcie.
 
-🟣 **Pop!_OS** – tworzona przez firmę System76, dedykowana graczom i twórcom treści. Oferuje zoptymalizowane środowisko graficzne oraz wsparcie dla GPU NVIDIA i AMD.
-
-🟠 **Elementary OS** – dystrybucja dla użytkowników szukających minimalistycznego i estetycznego systemu przypominającego macOS.
-
 </div>
 
 <div
-  id=""
+  id="komendy_podstawowe"
   className="scroll-mt-12 mt-10 ml-5 font-bold text-gray-500 dark:text-shadow-black dark:text-shadow-sm">
-    Kolejna rzecz
+    Podstawe Komendy (Ubuntu/Debian/Mint)
 </div>
 
+
+
+<div
+id="systemowe-podstawowe-komendy"
+className="ml-4 mt-10 scroll-mt-12">
+  ## Ubuntu / Mint / Debian
+</div>
+
+<div className="mt-10 ml-20 mr-20 ">
+  <table className="border border-gray-300 dark:border-gray-700 overflow-hidden text-sm shadow-sm mt-8">
+  <thead className="bg-gray-100 dark:bg-gray-800 text-white dark:text-gray-100">
+    <tr>
+      <th className="px-4 py-3 text-left text-base font-semibold">💻 Podstawowe komendy (Ubuntu / Linux Mint / Debian)</th>
+      <th className="px-4 py-3 text-left text-base font-semibold">🧭 Opis działania</th>
+    </tr>
+  </thead>
+  <tbody className="bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200">
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4">
+      ```bash
+        sudo apt update
+      ```
+      
+      </td>
+      <td className="px-4 py-4">
+        🔄 <strong>Aktualizuje listę dostępnych pakietów</strong> w repozytoriach.  
+        Użyj tej komendy, aby sprawdzić, czy są dostępne nowe wersje oprogramowania.
+      </td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4">
+      ```bash
+        sudo apt upgrade
+      ```
+      </td>
+      <td className="px-4 py-4">
+        ⚙️ <strong>Aktualizuje wszystkie zainstalowane pakiety</strong> do najnowszych wersji.  
+        Zazwyczaj uruchamiana po komendzie <code>sudo apt update</code>.
+      </td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 ">
+      ```bash
+        sudo apt install nazwa_pakietu
+      ```
+      </td>
+      <td className="px-4 py-4">
+        📦 <strong>Instaluje wybrany program</strong> z repozytorium.  
+        Przykład: <code>sudo apt install firefox</code> zainstaluje przeglądarkę Firefox.
+      </td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4">
+      ```bash
+        sudo apt remove nazwa_pakietu
+      ```
+      </td>
+      <td className="px-4 py-4">
+        🗑️ <strong>Odinstalowuje wskazany program</strong> z systemu, pozostawiając pliki konfiguracyjne.  
+        Użyj <code>sudo apt purge nazwa_pakietu</code>, aby usunąć także ustawienia.
+      </td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4">
+      ```bash
+        sudo apt autoremove
+      ```
+      </td>
+      <td className="px-4 py-4">
+        🧹 <strong>Usuwa niepotrzebne pakiety</strong>, które zostały zainstalowane automatycznie, ale nie są już używane.  
+        Pomaga zachować porządek i zwolnić miejsce na dysku.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+<div
+id="operacje-na-adresach-plikow"
+className="ml-4 mt-10 scroll-mt-12">
+  ## Operacje na adresach plikow
+</div>
+<table className="border border-gray-300 dark:border-gray-700 overflow-hidden text-sm shadow-sm mt-8">
+  <thead className="bg-gray-100 dark:bg-gray-800 text-white dark:text-gray-100">
+    <tr>
+      <th className="px-4 py-3 text-left text-base font-semibold">📁 Komenda</th>
+      <th className="px-4 py-3 text-left text-base font-semibold">🧭 Opis działania</th>
+      <th className="px-4 py-3 text-left text-base font-semibold">💡 Przykład użycia</th>
+    </tr>
+  </thead>
+  <tbody className="bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200">
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">pwd</td>
+      <td className="px-4 py-4">🔍 Wyświetla <strong>aktualny katalog roboczy</strong>.</td>
+      <td className="px-4 py-4">
+        ```bash
+        pwd
+        # /home/użytkownik/Documents
+        ```
+      </td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">ls</td>
+      <td className="px-4 py-4">📂 Pokazuje <strong>zawartość katalogu</strong>.</td>
+      <td className="px-4 py-4">
+        ```bash
+        ls -l     # szczegółowy widok
+        ls -a     # pokaż ukryte pliki
+        ```
+      </td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">cd</td>
+      <td className="px-4 py-4">🚶‍♂️ <strong>Zmienia katalog</strong>.</td>
+      <td className="px-4 py-4">
+        ```bash
+        cd /home/użytkownik/
+        cd ..    # cofnięcie o poziom wyżej
+        cd ~     # katalog domowy
+        ```
+      </td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">mkdir</td>
+      <td className="px-4 py-4">📁 Tworzy <strong>nowy katalog</strong>.</td>
+      <td className="px-4 py-4">
+        ```bash
+        mkdir projekty
+        ```
+      </td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">rmdir</td>
+      <td className="px-4 py-4">🗑️ Usuwa <strong>pusty katalog</strong>.</td>
+      <td className="px-4 py-4">
+        ```bash
+        rmdir test
+        ```
+      </td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">rm -r</td>
+      <td className="px-4 py-4">⚠️ Usuwa <strong>katalog wraz z zawartością</strong>.</td>
+      <td className="px-4 py-4">
+        ```bash
+        rm -r stare_pliki
+        ```
+      </td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">cp</td>
+      <td className="px-4 py-4">📦 Kopiuje <strong>plik lub katalog</strong>.</td>
+      <td className="px-4 py-4">
+        ```bash
+        cp plik.txt kopia.txt
+        ```
+      </td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">mv</td>
+      <td className="px-4 py-4">🚚 <strong>Przenosi lub zmienia nazwę</strong> pliku/katalogu.</td>
+      <td className="px-4 py-4">
+        ```bash
+        mv plik.txt /home/użytkownik/Dokumenty/
+        ```
+      </td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">touch</td>
+      <td className="px-4 py-4">📝 Tworzy <strong>pusty plik</strong> lub aktualizuje datę modyfikacji.</td>
+      <td className="px-4 py-4">
+        ```bash
+        touch notatka.txt
+        ```
+      </td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">cat</td>
+      <td className="px-4 py-4">📄 Wyświetla <strong>zawartość pliku</strong>.</td>
+      <td className="px-4 py-4">
+        ```bash
+        cat notatka.txt
+        ```
+      </td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">find</td>
+      <td className="px-4 py-4">🔎 Szuka <strong>plików lub katalogów</strong> według nazwy.</td>
+      <td className="px-4 py-4">
+        ```bash
+        find /home -name "plik.txt"
+        ```
+      </td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">tree</td>
+      <td className="px-4 py-4">🌲 Wyświetla <strong>strukturę katalogów w formie drzewa</strong>.</td>
+      <td className="px-4 py-4">
+        ```bash
+        tree /etc
+        ```
+      </td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">clear</td>
+      <td className="px-4 py-4">🧼 Czyści ekran terminala.</td>
+      <td className="px-4 py-4">
+        ```bash
+        clear
+        ```
+      </td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">history</td>
+      <td className="px-4 py-4">📜 Pokazuje historię wprowadzonych komend.</td>
+      <td className="px-4 py-4">
+        ```bash
+        history
+        ```
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+</div>
 
 
 

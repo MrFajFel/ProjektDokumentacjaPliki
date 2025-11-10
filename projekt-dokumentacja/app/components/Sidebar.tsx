@@ -21,7 +21,13 @@ export default function Sidebar(){
                     
             <ul className="flex flex-col text-center m-2">
                <li className="text-2xl mt-1 ml-4 w-fit p-1 pt-0 pb-0 border-l border-l-gray-400 hover:border-black dark:border-l-white dark:hover:border-l-gray-500  cursor-pointer ">
-                     <a href="">Kolejna rzecz</a>
+                     <a href="/#komendy_podstawowe">Komendy</a>
+                </li>
+                <li className="mt-1 ml-4 w-fit p-1 pt-0 pb-0 border-l text-gray-800 hover:text-gray-400   border-l-gray-400 hover:border-black dark:text-gray-400 dark:hover:text-gray-700  dark:border-l-gray-400 dark:hover:border-l-gray-500  cursor-pointer">
+                    <a href="/#systemowe-podstawowe-komendy">Podstawowe Komendy</a>
+                </li>
+                 <li className="mt-1 ml-4 w-fit p-1 pt-0 pb-0 border-l text-gray-800 hover:text-gray-400   border-l-gray-400 hover:border-black dark:text-gray-400 dark:hover:text-gray-700  dark:border-l-gray-400 dark:hover:border-l-gray-500  cursor-pointer">
+                    <a href="/#operacje-na-adresach-plikow">Operacja na adresach</a>
                 </li>
             </ul>
         </div>
