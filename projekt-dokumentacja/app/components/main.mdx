@@ -143,6 +143,97 @@ className="ml-4 mt-10 scroll-mt-12">
 
 
 
+<div 
+id="sudo-operacja"
+className="ml-4 mt-10 scroll-mt-12">
+  ## Operacja sudo
+</div>
+
+<div className="mt-10 ml-20 mr-20 ">
+  Komenda <code className="text-white">sudo</code> (skrót od "superuser do") pozwala na wykonywanie poleceń z uprawnieniami administratora (root).
+  Jest to niezbędne do wykonywania zadań systemowych, takich jak instalacja oprogramowania, zmiana ustawień systemowych czy zarządzanie użytkownikami.
+  Użycie <code className="text-white">sudo</code> przed komendą tymczasowo podnosi uprawnienia użytkownika, umożliwiając wykonanie operacji wymagających wyższych uprawnień.
+  Po wpisaniu komendy z <code className="text-white">sudo</code>, system może poprosić o podanie hasła użytkownika w celu potwierdzenia tożsamości.
+  Należy używać <code className="text-white">sudo</code> ostrożnie, ponieważ błędne polecenia mogą prowadzić do poważnych problemów z systemem.
+
+
+
+  ### Jak to działa?
+
+  sudo sprawdza, czy użytkownik jest w grupie sudoers (czyli ma prawo używać sudo).
+  W Ubuntu jest to np. grupa sudo, w Debianie – adm lub wheel.
+
+  Następnie pyta o hasło użytkownika (nie roota!).
+
+  Jeśli hasło jest poprawne, polecenie zostaje uruchomione z uprawnieniami roota
+
+
+  ### Dodatkowe polecenia związane z sudo
+
+
+<table className="border border-gray-300 dark:border-gray-700 overflow-hidden text-sm shadow-sm mt-8 rounded-xl">
+  <thead className="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100">
+    <tr>
+      <th className="px-4 py-3 text-left text-base font-semibold">🧰 Komenda (sudo)</th>
+      <th className="px-4 py-3 text-left text-base font-semibold">🧭 Opis działania</th>
+    </tr>
+  </thead>
+  <tbody className="bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200">
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4">
+        ```bash
+        sudo -i
+        ```
+      </td>
+      <td className="px-4 py-4">
+        🧑‍💻 <strong>Otwiera powłokę jako root</strong> — jakbyś był zalogowany bezpośrednio jako administrator.  
+        Umożliwia wykonywanie wielu poleceń z pełnymi uprawnieniami bez wpisywania <code className="text-white">sudo</code> za każdym razem.
+      </td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4">
+        ```bash
+        sudo su
+        ```
+      </td>
+      <td className="px-4 py-4">
+        🔁 <strong>Przełącza użytkownika na konto root</strong> i otwiera jego powłokę.  
+        Podobne do <code className="text-white">sudo -i</code>, lecz działa przez wywołanie polecenia <code className="text-white">su</code>.
+      </td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4">
+        ```bash
+        sudo !!
+        ```
+      </td>
+      <td className="px-4 py-4">
+        ⚡ <strong>Uruchamia ostatnie polecenie ponownie z sudo</strong>.  
+        Bardzo przydatne, gdy zapomnisz dodać <code className="text-white">sudo</code> i dostaniesz błąd „Permission denied”.
+      </td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4">
+        ```bash
+        sudo visudo
+        ```
+      </td>
+      <td className="px-4 py-4">
+        🧩 <strong>Otwiera bezpieczny edytor pliku konfiguracyjnego</strong> <code className="text-white">/etc/sudoers</code>.  
+        Zapobiega błędom składni, które mogłyby zablokować dostęp do sudo.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+
+
+
 <div
 id="systemowe-podstawowe-komendy"
 className="ml-4 mt-10 scroll-mt-12">
@@ -179,7 +270,7 @@ className="ml-4 mt-10 scroll-mt-12">
       </td>
       <td className="px-4 py-4">
         ⚙️ <strong>Aktualizuje wszystkie zainstalowane pakiety</strong> do najnowszych wersji.  
-        Zazwyczaj uruchamiana po komendzie <code>sudo apt update</code>.
+        Zazwyczaj uruchamiana po komendzie <code className="text-white"> sudo apt update </code>.
       </td>
     </tr>
 
@@ -191,7 +282,7 @@ className="ml-4 mt-10 scroll-mt-12">
       </td>
       <td className="px-4 py-4">
         📦 <strong>Instaluje wybrany program</strong> z repozytorium.  
-        Przykład: <code>sudo apt install firefox</code> zainstaluje przeglądarkę Firefox.
+        Przykład: <code className="text-white">sudo apt install firefox</code> zainstaluje przeglądarkę Firefox.
       </td>
     </tr>
 
@@ -203,7 +294,7 @@ className="ml-4 mt-10 scroll-mt-12">
       </td>
       <td className="px-4 py-4">
         🗑️ <strong>Odinstalowuje wskazany program</strong> z systemu, pozostawiając pliki konfiguracyjne.  
-        Użyj <code>sudo apt purge nazwa_pakietu</code>, aby usunąć także ustawienia.
+        Użyj <code className="text-white">sudo apt purge nazwa_pakietu</code>, aby usunąć także ustawienia.
       </td>
     </tr>
 
@@ -240,7 +331,7 @@ className="ml-4 mt-10 scroll-mt-12">
   <tbody className="bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200">
 
     <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-      <td className="px-4 py-4 font-mono text-sm text-green-400">pwd</td>
+      <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">**pwd**</td>
       <td className="px-4 py-4">🔍 Wyświetla <strong>aktualny katalog roboczy</strong>.</td>
       <td className="px-4 py-4">
         ```bash
@@ -251,7 +342,7 @@ className="ml-4 mt-10 scroll-mt-12">
     </tr>
 
     <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-      <td className="px-4 py-4 font-mono text-sm text-green-400">ls</td>
+      <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">ls</td>
       <td className="px-4 py-4">📂 Pokazuje <strong>zawartość katalogu</strong>.</td>
       <td className="px-4 py-4">
         ```bash
@@ -262,7 +353,7 @@ className="ml-4 mt-10 scroll-mt-12">
     </tr>
 
     <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-      <td className="px-4 py-4 font-mono text-sm text-green-400">cd</td>
+      <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">cd</td>
       <td className="px-4 py-4">🚶‍♂️ <strong>Zmienia katalog</strong>.</td>
       <td className="px-4 py-4">
         ```bash
@@ -274,7 +365,7 @@ className="ml-4 mt-10 scroll-mt-12">
     </tr>
 
     <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-      <td className="px-4 py-4 font-mono text-sm text-green-400">mkdir</td>
+      <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">mkdir</td>
       <td className="px-4 py-4">📁 Tworzy <strong>nowy katalog</strong>.</td>
       <td className="px-4 py-4">
         ```bash
@@ -284,7 +375,7 @@ className="ml-4 mt-10 scroll-mt-12">
     </tr>
 
     <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-      <td className="px-4 py-4 font-mono text-sm text-green-400">rmdir</td>
+      <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">rmdir</td>
       <td className="px-4 py-4">🗑️ Usuwa <strong>pusty katalog</strong>.</td>
       <td className="px-4 py-4">
         ```bash
@@ -294,17 +385,18 @@ className="ml-4 mt-10 scroll-mt-12">
     </tr>
 
     <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-      <td className="px-4 py-4 font-mono text-sm text-green-400">rm -r</td>
-      <td className="px-4 py-4">⚠️ Usuwa <strong>katalog wraz z zawartością</strong>.</td>
+      <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">rm</td>
+      <td className="px-4 py-4">⚠️ Usuwa <strong>pliki i katalogi</strong>.</td>
       <td className="px-4 py-4">
         ```bash
-        rm -r stare_pliki
+        rm nazwa_pliku       # usuniecie pliku
+        rm -r nazwa_katalogu # usuniecie katologu wraz z zawartoscia
         ```
       </td>
     </tr>
 
     <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-      <td className="px-4 py-4 font-mono text-sm text-green-400">cp</td>
+      <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">cp</td>
       <td className="px-4 py-4">📦 Kopiuje <strong>plik lub katalog</strong>.</td>
       <td className="px-4 py-4">
         ```bash
@@ -314,7 +406,7 @@ className="ml-4 mt-10 scroll-mt-12">
     </tr>
 
     <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-      <td className="px-4 py-4 font-mono text-sm text-green-400">mv</td>
+      <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">mv</td>
       <td className="px-4 py-4">🚚 <strong>Przenosi lub zmienia nazwę</strong> pliku/katalogu.</td>
       <td className="px-4 py-4">
         ```bash
@@ -324,7 +416,7 @@ className="ml-4 mt-10 scroll-mt-12">
     </tr>
 
     <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-      <td className="px-4 py-4 font-mono text-sm text-green-400">touch</td>
+      <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">touch</td>
       <td className="px-4 py-4">📝 Tworzy <strong>pusty plik</strong> lub aktualizuje datę modyfikacji.</td>
       <td className="px-4 py-4">
         ```bash
@@ -334,7 +426,7 @@ className="ml-4 mt-10 scroll-mt-12">
     </tr>
 
     <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-      <td className="px-4 py-4 font-mono text-sm text-green-400">cat</td>
+      <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">cat</td>
       <td className="px-4 py-4">📄 Wyświetla <strong>zawartość pliku</strong>.</td>
       <td className="px-4 py-4">
         ```bash
@@ -344,7 +436,7 @@ className="ml-4 mt-10 scroll-mt-12">
     </tr>
 
     <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-      <td className="px-4 py-4 font-mono text-sm text-green-400">find</td>
+      <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">find</td>
       <td className="px-4 py-4">🔎 Szuka <strong>plików lub katalogów</strong> według nazwy.</td>
       <td className="px-4 py-4">
         ```bash
@@ -354,17 +446,7 @@ className="ml-4 mt-10 scroll-mt-12">
     </tr>
 
     <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-      <td className="px-4 py-4 font-mono text-sm text-green-400">tree</td>
-      <td className="px-4 py-4">🌲 Wyświetla <strong>strukturę katalogów w formie drzewa</strong>.</td>
-      <td className="px-4 py-4">
-        ```bash
-        tree /etc
-        ```
-      </td>
-    </tr>
-
-    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-      <td className="px-4 py-4 font-mono text-sm text-green-400">clear</td>
+      <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">clear</td>
       <td className="px-4 py-4">🧼 Czyści ekran terminala.</td>
       <td className="px-4 py-4">
         ```bash
@@ -374,7 +456,7 @@ className="ml-4 mt-10 scroll-mt-12">
     </tr>
 
     <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-      <td className="px-4 py-4 font-mono text-sm text-green-400">history</td>
+      <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">history</td>
       <td className="px-4 py-4">📜 Pokazuje historię wprowadzonych komend.</td>
       <td className="px-4 py-4">
         ```bash
@@ -386,8 +468,139 @@ className="ml-4 mt-10 scroll-mt-12">
   </tbody>
 </table>
 
+</div>
+
+
+
+ <div
+  id="programy"
+  className="scroll-mt-12 mt-10 ml-5 font-bold text-gray-500 dark:text-shadow-black dark:text-shadow-sm">
+    Programy
+</div>
+
+
+<div className="mt-10 ml-20 mr-20">
+
+<div
+id="operacja-nano"
+className=" mt-10 scroll-mt-12">
+## Edytor Nano
+</div>
+  Co robi Nano?
+
+  nano – to prosty edytor tekstowy działający w terminalu, służący do edycji plików konfiguracyjnych i tekstowych.
+
+  Instalacja edytora nano i sprawdzenie czy jest zainstalowany:
+
+  ### Sprawdzenie czy nano jest zainstalowane:
+  ```bash
+  nano --version # --version pokazuje wersję zainstalowanego nano (jesli jest zainstalowana)
+  ```
+  ### Instalacja:
+  ```bash
+  sudo apt install nano
+  ```
+
+
+
+<div
+id="operacja-nano"
+className=" mt-10 scroll-mt-12">
+   ## ⌨️ Podstawowe skróty klawiszowe w edytorze Nano
+</div>
+  <table className="border border-gray-300 dark:border-gray-700 overflow-hidden text-sm shadow-sm mt-8">
+  <thead className="bg-gray-100 dark:bg-gray-800 text-white dark:text-gray-100">
+    <tr>
+      <th className="px-4 py-3 text-left text-base font-semibold">⌨️ Skrót klawiszowy</th>
+      <th className="px-4 py-3 text-left text-base font-semibold">🧭 Opis działania</th>
+    </tr>
+  </thead>
+
+  <tbody className="bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200">
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">Ctrl + O</td>
+      <td className="px-4 py-4">💾 <strong>Zapisuje zmiany</strong> w pliku (Write Out). Po wciśnięciu naciśnij <em>Enter</em>, aby potwierdzić nazwę.</td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">Ctrl + X</td>
+      <td className="px-4 py-4">❌ <strong>Wyjście z edytora</strong>. Jeśli plik nie jest zapisany, Nano zapyta o potwierdzenie.</td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">Ctrl + G</td>
+      <td className="px-4 py-4">📖 <strong>Pomoc</strong> – otwiera ekran ze wszystkimi skrótami i instrukcjami.</td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">Ctrl + K</td>
+      <td className="px-4 py-4">✂️ <strong>Wytnij linię</strong> (usuwa bieżącą linię i kopiuje ją do schowka Nano).</td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">Ctrl + U</td>
+      <td className="px-4 py-4">📋 <strong>Wklej linię</strong> (przywraca ostatnio wycięty tekst).</td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">Ctrl + W</td>
+      <td className="px-4 py-4">🔍 <strong>Wyszukaj tekst</strong> w pliku.</td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">Ctrl + \\</td>
+      <td className="px-4 py-4">✏️ <strong>Znajdź i zamień</strong> tekst (Search & Replace).</td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">Ctrl + A</td>
+      <td className="px-4 py-4">⬅️ Przejdź na <strong>początek linii</strong>.</td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">Ctrl + E</td>
+      <td className="px-4 py-4">➡️ Przejdź na <strong>koniec linii</strong>.</td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">Ctrl + Y</td>
+      <td className="px-4 py-4">⬆️ <strong>Przewiń stronę w górę</strong>.</td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">Ctrl + V</td>
+      <td className="px-4 py-4">⬇️ <strong>Przewiń stronę w dół</strong>.</td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">Ctrl + C</td>
+      <td className="px-4 py-4">ℹ️ <strong>Wyświetla numer linii i kolumny</strong>, w której znajduje się kursor.</td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">Alt + A</td>
+      <td className="px-4 py-4">📑 <strong>Rozpoczyna zaznaczenie tekstu</strong> (tryb markowania).</td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-400">Alt + 6</td>
+      <td className="px-4 py-4">📋 <strong>Kopiuje zaznaczony tekst</strong> (bez wycinania).</td>
+    </tr>
+
+  </tbody>
+</table>
 
 </div>
+
+
+
+
+
+
+
+
+
 
 
 
