@@ -14,7 +14,6 @@ export default function Home() {
             <main className="flex mt-12">
               <Sidebar/>
               <div className="components w-[85%] ml-[15%] bg-white dark:bg-[#0E1111]">
-                
                   <Main/>
               </div>
             </main>
