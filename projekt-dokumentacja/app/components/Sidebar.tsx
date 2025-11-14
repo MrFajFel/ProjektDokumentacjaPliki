@@ -42,6 +42,9 @@ export default function Sidebar(){
                  <li className="mt-1 ml-4 w-fit p-1 pt-0 pb-0 border-l text-gray-800 hover:text-gray-400   border-l-gray-400 hover:border-black dark:text-gray-400 dark:hover:text-gray-700  dark:border-l-gray-400 dark:hover:border-l-gray-500  cursor-pointer">
                      <a href="/#apt"> apt </a>
                  </li>
+                 <li className="mt-1 ml-4 w-fit p-1 pt-0 pb-0 border-l text-gray-800 hover:text-gray-400   border-l-gray-400 hover:border-black dark:text-gray-400 dark:hover:text-gray-700  dark:border-l-gray-400 dark:hover:border-l-gray-500  cursor-pointer">
+                     <a href="/#flatpack"> flatpack </a>
+                 </li>
             </ul>
 
 
