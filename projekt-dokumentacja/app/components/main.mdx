@@ -234,12 +234,12 @@ className="ml-4 mt-10 scroll-mt-12">
 </div>
 
 
-
+---
 
 <div
 id="systemowe-podstawowe-komendy"
 className="ml-4 mt-10 scroll-mt-12">
-  ## Ubuntu / Mint / Debian
+  ## Podstawowe komendy systemowe
 </div>
 
 <div className="mt-10 ml-20 mr-20 ">
@@ -484,7 +484,7 @@ className="ml-4 mt-10 scroll-mt-12">
     <div
         id="apt"
         className=" mt-10 scroll-mt-12">
-        ## Pakiet apt
+        ## Menadżer pakietów apt
     </div>
     ### Czym jest apt?
     ***apt*** (Advanced Package Tool) to menedżer pakietów używany w systemach opartych na Debianie, takich jak:
@@ -497,14 +497,13 @@ className="ml-4 mt-10 scroll-mt-12">
     Dzięki **apt** nie musisz pobierać programów ręcznie - wszystko odbywa się przez terminal, bezpiecznie i automatycznie
 
     ### Po przykładowe użycie  <a href="/#uzycie_apt">Kliknij Tutaj</a>
-
-
-
-
+</div>
+  ---
+<div className="mt-10 ml-20 mr-20">
     <div
         id="flatpack"
         className="mt-10 scroll-mt-12">
-        ## Pakiet flatpack
+        ## Menadżer pakietów flatpack
     </div>
 
     ### Czym jest flatpack?
@@ -529,14 +528,87 @@ className="ml-4 mt-10 scroll-mt-12">
     sudo apt install flatpack
     ```
 
-    (Dodatkowo warto dodać repozytorium)
-
-    # Tutaj chyba link dodam do flatpacka albo cos nie wiem
+    #### Szczegółowa instrukcja instalacji:  <a target="_blank" href="https://flatpak.org/setup/Ubuntu"> Kliknij tutaj </a>
 
 
-    # tabela
+  ## Przykładowe użycie Flatpak 
+    
 
+<table className="border border-gray-300 dark:border-gray-700 overflow-hidden text-sm shadow-sm">
+  <thead className="bg-gray-100 dark:bg-gray-800 text-white dark:text-gray-100">
+    <tr>
+      <th className="px-4 py-3 text-left text-base font-semibold">💻 Komenda</th>
+      <th className="px-4 py-3 text-left text-base font-semibold">🧭 Opis działania</th>
+    </tr>
+  </thead>
 
+  <tbody className="bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200">
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-800">
+        flatpak search firefox
+      </td>
+      <td className="px-4 py-4">
+        🔍 Wyszukuje aplikacje dostępne w repozytoriach Flatpak.
+      </td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-800">
+        flatpak install flathub org.mozilla.firefox
+      </td>
+      <td className="px-4 py-4">
+        📥 Instaluje aplikację z repozytorium Flathub.
+      </td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-800">
+        flatpak run org.mozilla.firefox
+      </td>
+      <td className="px-4 py-4">
+        ▶️ Uruchamia zainstalowaną aplikację Flatpak.
+      </td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-800">
+        flatpak update
+      </td>
+      <td className="px-4 py-4">
+        ⬆️ Aktualizuje wszystkie aplikacje Flatpak i środowiska runtime.
+      </td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-800">
+        flatpak list
+      </td>
+      <td className="px-4 py-4">
+        📄 Wyświetla listę wszystkich zainstalowanych aplikacji Flatpak.
+      </td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-800">
+        flatpak uninstall org.mozilla.firefox
+      </td>
+      <td className="px-4 py-4">
+        🗑️ Usuwa wybraną aplikację Flatpak.
+      </td>
+    </tr>
+
+    <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-800">
+        flatpak uninstall --unused
+      </td>
+      <td className="px-4 py-4">
+        🧹 Usuwa nieużywane środowiska runtime i zależności.
+      </td>
+    </tr>
+
+  </tbody>
+</table>
 
 </div>
 
@@ -620,7 +692,7 @@ className=" mt-10 scroll-mt-12">
 
     <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
       <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-800 dark:text-green-800">Ctrl + \\</td>
-      <td className="px-4 py-4">✏️ <strong>Znajdź i zamień</strong> tekst (Search & Replace).</td>
+      <td className="px-4 py-4">✏️ <strong>Przenieś kursor</strong> do podanej pozycji.</td>
     </tr>
 
     <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
@@ -660,8 +732,11 @@ className=" mt-10 scroll-mt-12">
 
   </tbody>
 </table>
+</div>
 
+---
 
+<div className="mt-10 ml-20 mr-20">
 <div
 id="tmux"
 className=" mt-10 scroll-mt-12">
@@ -762,6 +837,21 @@ sudo apt install tmux
     <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
       <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-800">Ctrl + B, C</td>
       <td className="px-4 py-4">Utwórz nowe okno w sesji.</td>
+    </tr>
+
+     <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-800">Ctrl + B, [0-9]</td>
+      <td className="px-4 py-4">Zmiana sesji.</td>
+    </tr>
+
+     <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-800">Ctrl + B, :</td>
+      <td className="px-4 py-4">Otworzenie terminala programu.</td>
+    </tr>
+
+     <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-800">Ctrl + B, : -> kill-sesion</td>
+      <td className="px-4 py-4">Zamkniecie wszystkich sesji.</td>
     </tr>
 
     <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
