@@ -8,3 +8,12 @@ html, body{
     margin: 0;
     scroll-behavior: smooth;
 }
+
+
+code{
+    color: white;
+}
+
+section{
+    display: block;
+}
