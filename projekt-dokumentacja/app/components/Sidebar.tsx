@@ -47,7 +47,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps){
             
             {/* Sidebar */}
             <div className={`
-                fixed scroll-smooth h-full overflow-y-scroll 
+                fixed scroll-smooth h-full overflow-auto 
                 w-[280px] sm:w-[300px] lg:w-[15%] 
                 bg-white border-gray-300 
                 dark:text-[#EAEAEA] dark:bg-[#0E1111] 

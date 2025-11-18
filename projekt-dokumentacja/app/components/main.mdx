@@ -1,16 +1,17 @@
 import "@/app/markdown.css";
 import SectionList from "./MainComponents/SectionList.tsx"
-import SectionTitles from "./MainComponents/SectionTitles.tsx"
+import SectionTitle from "./MainComponents/SectionTitle.tsx"
+import SectionSubTitle from "./MainComponents/SectionSubTitle.tsx"
 
 # *Dokumentacja posaida jedynie komendy postawione na dystrybucjach **Debiana m.in. Ubuntu oraz Linux Mint.***
 
-<div id="wstep" className="scroll-mt-12 mt-10 ml-5 font-bold text-gray-500 dark:text-shadow-black dark:text-shadow-sm">
+<SectionTitle id="wstep">
   Wstęp
-</div>
+</SectionTitle>
 
-<div id="czym-jest-linux" className="ml-4 mt-10 scroll-mt-12">
+<SectionSubTitle id="czym-jest-linux">
   ## Czym jest Linux?
-</div>
+</SectionSubTitle>
 
 <SectionList>
   Linux to system operacyjny typu open source, czyli oprogramowanie, które zarządza całym sprzętem komputera — od procesora, przez pamięć, aż po urządzenia zewnętrzne, takie jak klawiatura czy mysz.
@@ -27,9 +28,9 @@ import SectionTitles from "./MainComponents/SectionTitles.tsx"
   Co więcej, Android, system obecny w miliardach smartfonów, również bazuje na jądrze Linuxa.
 </SectionList>
 
-<div id="zalety-i-wady" className="ml-4 mt-10 scroll-mt-12">
+<SectionSubTitle id="zalety-i-wady" >
   ## Zalety Linuxa oraz Wady Linuxa
-</div>
+</SectionSubTitle>
 
 <SectionList>
   
@@ -88,9 +89,9 @@ import SectionTitles from "./MainComponents/SectionTitles.tsx"
 
 </SectionList>
 
-<div id="dystrybucje-linux" className="ml-4 mt-10 scroll-mt-12">
+<SectionSubTitle id="dystrybucje-linux">
   ## Dystrybucje Linuxa i ich zastosowanie
-</div>
+</SectionSubTitle>
 
 <SectionList>
   #### Linux występuje w wielu odmianach, zwanych dystrybucjami (distro). Każda z nich jest tworzona z myślą o innym użytkowniku i zastosowaniu. Dystrybucje różnią się środowiskiem graficznym, zestawem preinstalowanego oprogramowania, sposobem zarządzania pakietami i poziomem wsparcia społeczności.
@@ -115,13 +116,13 @@ import SectionTitles from "./MainComponents/SectionTitles.tsx"
 
 ---
 
-<div id="komendy_podstawowe" className="scroll-mt-12 mt-10 ml-5 font-bold text-gray-500 dark:text-shadow-black dark:text-shadow-sm">
+<SectionTitle id="komendy_podstawowe">
   Podstawe Komendy (Ubuntu/Debian/Mint)
-</div>
+</SectionTitle>
 
-<div id="sudo-operacja" className="ml-4 mt-10 scroll-mt-12">
+<SectionSubTitle id="sudo-operacja">
   ## Operacja sudo
-</div>
+</SectionSubTitle>
 
 <SectionList>
 
@@ -196,9 +197,9 @@ import SectionTitles from "./MainComponents/SectionTitles.tsx"
 ---
 
 
-<div id="operacje-na-adresach-plikow" className="ml-4 mt-10 scroll-mt-12">
+<SectionSubTitle id="operacje-na-adresach-plikow">
     ## Operacje na adresach plikow
-</div>
+</SectionSubTitle>
 
 <SectionList>
 
@@ -311,15 +312,15 @@ import SectionTitles from "./MainComponents/SectionTitles.tsx"
 
 ---
 
-<div id="pakiety" className="scroll-mt-12 mt-10 ml-5 font-bold text-gray-500 dark:text-shadow-black dark:text-shadow-sm">
+<SectionTitle id="pakiety">
   Pakiety
-</div>
+</SectionTitle>
 
 <SectionList>
   
-  <div id="apt" className="mt-10 scroll-mt-12">
+  <SectionSubTitle id="apt">
     ## Menadżer pakietów apt
-  </div>
+  </SectionSubTitle>
   ### Czym jest apt?
   ***apt*** (Advanced Package Tool) to menedżer pakietów używany w systemach opartych na Debianie, takich jak:
   - Ubuntu
@@ -337,7 +338,7 @@ import SectionTitles from "./MainComponents/SectionTitles.tsx"
       <thead className="bg-gray-100 dark:bg-gray-800 text-white dark:text-gray-100">
         <tr>
           <th className="w-1/3 px-4 py-3 text-left text-base font-semibold">
-            💻 Podstawowe komendy (Ubuntu / Linux Mint / Debian)
+            💻 Komenda (apt)
           </th>
           <th className="w-2/3 px-4 py-3 text-left text-base font-semibold">
             🧭 Opis działania
@@ -407,9 +408,9 @@ import SectionTitles from "./MainComponents/SectionTitles.tsx"
 </SectionList>
 
 ---
-<div id="flatpack" className="mt-10 scroll-mt-12">
+<SectionSubTitle id="flatpack">
     ## Menadżer pakietów flatpack
-</div>
+</SectionSubTitle>
 
 <SectionList>
   
@@ -515,15 +516,15 @@ import SectionTitles from "./MainComponents/SectionTitles.tsx"
 
 ---
 
-<div id="programy" className="scroll-mt-12 mt-10 ml-5 font-bold text-gray-500 dark:text-shadow-black dark:text-shadow-sm">
+<SectionTitle id="programy">
   Programy
-</div>
+</SectionTitle>
 
 <SectionList>
 
-  <div id="operacja-nano" className=" mt-10 scroll-mt-12">
+  <SectionSubTitle id="operacja-nano">
   ## Edytor Nano
-  </div>
+  </SectionSubTitle>
 
   Co robi Nano?
 
@@ -543,9 +544,10 @@ import SectionTitles from "./MainComponents/SectionTitles.tsx"
   sudo apt install nano
   ```
 
-  <div id="operacja-nano" className=" mt-10 scroll-mt-12">
+  <SectionSubTitle id="operacja-nano">
     ## Podstawowe skróty klawiszowe w edytorze Nano
-  </div>
+  </SectionSubTitle>
+
   <table className="border border-gray-300 dark:border-gray-700 overflow-hidden text-sm shadow-sm mt-8 ">
     <thead className="bg-gray-100 dark:bg-gray-800 text-white dark:text-gray-100">
       <tr>
@@ -617,9 +619,9 @@ import SectionTitles from "./MainComponents/SectionTitles.tsx"
 
 ---
 
-  <div id="tmux" className=" mt-10 scroll-mt-12">
+  <SectionSubTitle id="tmux">
     ## Tmux
-  </div>
+  </SectionSubTitle>
 
 <SectionList>
 
