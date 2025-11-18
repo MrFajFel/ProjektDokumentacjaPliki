@@ -1,16 +1,18 @@
 import "@/app/markdown.css";
+import SectionList from "./MainComponents/Section.tsx"
+import SectionTitles from "./MainComponents/SectionTitles.tsx"
 
 # *Dokumentacja posaida jedynie komendy postawione na dystrybucjach **Debiana m.in. Ubuntu oraz Linux Mint.***
 
 <div id="wstep" className="scroll-mt-12 mt-10 ml-5 font-bold text-gray-500 dark:text-shadow-black dark:text-shadow-sm">
-  WSTĘP
+  Wstęp
 </div>
 
 <div id="czym-jest-linux" className="ml-4 mt-10 scroll-mt-12">
   ## Czym jest Linux?
 </div>
 
-<div className="mt-10 md:sm:w-full md:sm:mr-0 md:sm:ml-0 md:lg:ml-20 md:lg:mr-20 md:lg:w-fit">
+<SectionList>
   Linux to system operacyjny typu open source, czyli oprogramowanie, które zarządza całym sprzętem komputera — od procesora, przez pamięć, aż po urządzenia zewnętrzne, takie jak klawiatura czy mysz.
   W praktyce oznacza to, że Linux pełni podobną funkcję jak Windows czy macOS, ale różni się od nich filozofią, budową i licencjonowaniem.
 
@@ -23,13 +25,13 @@ import "@/app/markdown.css";
   Linux jest używany na całym świecie — nie tylko przez pasjonatów informatyki, ale też przez największe firmy technologiczne.
   Google, Amazon, Facebook, NASA, a nawet Międzynarodowa Stacja Kosmiczna (ISS) wykorzystują systemy oparte na jądrze Linuxa.
   Co więcej, Android, system obecny w miliardach smartfonów, również bazuje na jądrze Linuxa.
-</div>
+</SectionList>
 
 <div id="zalety-i-wady" className="ml-4 mt-10 scroll-mt-12">
   ## Zalety Linuxa oraz Wady Linuxa
 </div>
 
-<section className="mt-10 md:sm:w-full md:sm:mr-0 md:sm:ml-0 md:lg:ml-20 md:lg:mr-20 md:lg:w-fit">
+<SectionList>
   
   <div className="overflow-x-auto">
     <table className="table-fixed w-full text-sm">
@@ -84,13 +86,13 @@ import "@/app/markdown.css";
     </table>
   </div>
 
-</section>
+</SectionList>
 
 <div id="dystrybucje-linux" className="ml-4 mt-10 scroll-mt-12">
   ## Dystrybucje Linuxa i ich zastosowanie
 </div>
 
-<section className="mt-10 md:sm:w-full md:sm:mr-0 md:sm:ml-0 md:lg:ml-20 md:lg:mr-20 md:lg:w-fit">
+<SectionList>
   #### Linux występuje w wielu odmianach, zwanych dystrybucjami (distro). Każda z nich jest tworzona z myślą o innym użytkowniku i zastosowaniu. Dystrybucje różnią się środowiskiem graficznym, zestawem preinstalowanego oprogramowania, sposobem zarządzania pakietami i poziomem wsparcia społeczności.
 
   **Przykładowe dystrybucje:**
@@ -109,7 +111,7 @@ import "@/app/markdown.css";
 
   🔴 **CentOS** / Rocky Linux / AlmaLinux &mdash; dystrybucje oparte na Red Hat Enterprise Linux (RHEL), cenione w środowiskach serwerowych i korporacyjnych. Zapewniają stabilność i długoterminowe wsparcie.
 
-</section>
+</SectionList>
 
 ---
 
@@ -121,7 +123,7 @@ import "@/app/markdown.css";
   ## Operacja sudo
 </div>
 
-<section className="mt-10 md:sm:w-full md:sm:mr-0 md:sm:ml-0 md:lg:ml-20 md:lg:mr-20 md:lg:w-fit">
+<SectionList>
 
   Komenda <code className="text-white">sudo</code> (skrót od "superuser do") pozwala na wykonywanie poleceń z uprawnieniami administratora (root).
   Jest to niezbędne do wykonywania zadań systemowych, takich jak instalacja oprogramowania, zmiana ustawień systemowych czy zarządzanie użytkownikami.
@@ -189,18 +191,19 @@ import "@/app/markdown.css";
     </table>
   </div>
 
-</section>
+</SectionList>
 
 ---
 
-<section className="mt-10 md:sm:w-full md:sm:mr-0 md:sm:ml-0 md:lg:ml-20 md:lg:mr-20 md:lg:w-fit">
-  
-  <div id="operacje-na-adresach-plikow" className="ml-4 mt-10 scroll-mt-12">
-    ## Operacje na adresach plikow
-  </div>
 
-  <div className="mt-8">
-    <table className="table-fixed w-full text-sm">
+<div id="operacje-na-adresach-plikow" className="ml-4 mt-10 scroll-mt-12">
+    ## Operacje na adresach plikow
+</div>
+
+<SectionList>
+
+  <div className="mt-8 text-wrap">
+    <table className="text-wrap table-fixed w-full text-sm">
       <thead className="bg-gray-100 dark:bg-gray-800 text-white dark:text-gray-100">
         <tr>
           <th className="w-1/4 px-4 py-3 text-left text-base font-semibold">📁 Komenda</th>
@@ -304,7 +307,7 @@ import "@/app/markdown.css";
     </table>
   </div>
 
-</section>
+</SectionList>
 
 ---
 
@@ -312,7 +315,7 @@ import "@/app/markdown.css";
   Pakiety
 </div>
 
-<section className="mt-10 md:sm:w-full md:sm:mr-0 md:sm:ml-0 md:lg:ml-20 md:lg:mr-20 md:lg:w-fit">
+<SectionList>
   
   <div id="apt" className="mt-10 scroll-mt-12">
     ## Menadżer pakietów apt
@@ -401,15 +404,15 @@ import "@/app/markdown.css";
     </table>
   </div>
   
-</section>
+</SectionList>
 
 ---
-
-<section className="mt-10 md:sm:w-full md:sm:mr-0 md:sm:ml-0 md:lg:ml-20 md:lg:mr-20 md:lg:w-fit">
-  
-  <div id="flatpack" className="mt-10 scroll-mt-12">
+<div id="flatpack" className="mt-10 scroll-mt-12">
     ## Menadżer pakietów flatpack
-  </div>
+</div>
+
+<SectionList>
+  
 
   ### Czym jest flatpack?
 
@@ -508,7 +511,7 @@ import "@/app/markdown.css";
     </tbody>
   </table>
   
-</section>
+</SectionList>
 
 ---
 
@@ -516,7 +519,7 @@ import "@/app/markdown.css";
   Programy
 </div>
 
-<section className="mt-10 md:sm:w-full md:sm:mr-0 md:sm:ml-0 md:lg:ml-20 md:lg:mr-20 md:lg:w-fit">
+<SectionList>
 
   <div id="operacja-nano" className=" mt-10 scroll-mt-12">
   ## Edytor Nano
@@ -610,17 +613,15 @@ import "@/app/markdown.css";
     </tbody>
   </table>
 
-</section>
+</SectionList>
 
 ---
 
-<section className="mt-10 md:sm:w-full md:sm:mr-0 md:sm:ml-0 md:lg:ml-20 md:lg:mr-20 md:lg:w-fit">
-  
-  <div
-  id="tmux"
-  className=" mt-10 scroll-mt-12">
+  <div id="tmux" className=" mt-10 scroll-mt-12">
     ## Tmux
   </div>
+
+<SectionList>
 
   ### Co to jest tmux
 
@@ -785,4 +786,4 @@ import "@/app/markdown.css";
     ```
   </div>
 
-</section>
+</SectionList>

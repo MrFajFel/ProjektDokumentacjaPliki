@@ -1,9 +1,38 @@
 'use client';
 
+import { PropsWithChildren } from "react";
+
 interface SidebarProps {
     isOpen: boolean;
     onClose: () => void;
 }
+
+
+function MyLinksContainer(props: PropsWithChildren){
+    return(
+        <ul className="flex flex-col text-center m-2 pt-6 lg:pt-2">
+            {props.children}
+        </ul>
+    );
+}
+
+function MainLinks(props: PropsWithChildren){
+    return(
+        <li className="text-2xl sm:text-2xl mt-1 ml-4 w-fit p-1 pt-0 pb-0 border-l border-l-gray-400 hover:border-black dark:border-l-white dark:hover:border-l-gray-500 cursor-pointer">
+            {props.children}
+        </li>
+    );
+}
+
+function SubLinks(props: PropsWithChildren){
+    return(
+        <li className="mt-1 ml-4 w-fit p-1 pt-0 pb-0 border-l text-2xl sm:text-base text-gray-800 hover:text-gray-400 border-l-gray-400 hover:border-black dark:text-gray-400 dark:hover:text-gray-700 dark:border-l-gray-400 dark:hover:border-l-gray-500 cursor-pointer">
+            {props.children}
+        </li>
+    );
+}
+
+
 
 export default function Sidebar({ isOpen, onClose }: SidebarProps){
     return(
@@ -27,56 +56,56 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps){
                 z-40
                 ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
             `}>
-                <ul className="flex flex-col text-center m-2 pt-12 lg:pt-2">
-                    <li className="text-4xl sm:text-2xl mt-1 ml-4 w-fit p-1 pt-0 pb-0 border-l border-l-gray-400 hover:border-black dark:border-l-white dark:hover:border-l-gray-500 cursor-pointer">
+                <MyLinksContainer>
+                    <MainLinks>
                          <a href="/#wstep" onClick={onClose}>Wstęp</a>
-                    </li>
-                    <li className="mt-1 ml-4 w-fit p-1 pt-0 pb-0 border-l text-2xl sm:text-base text-gray-800 hover:text-gray-400 border-l-gray-400 hover:border-black dark:text-gray-400 dark:hover:text-gray-700 dark:border-l-gray-400 dark:hover:border-l-gray-500 cursor-pointer">
+                    </MainLinks>
+                    <SubLinks>
                         <a href="/#czym-jest-linux" onClick={onClose}>Czym jest Linux?</a>
-                    </li>
-                    <li className="mt-1 ml-4 w-fit p-1 pt-0 pb-0 border-l text-2xl sm:text-base text-gray-800 hover:text-gray-400 border-l-gray-400 hover:border-black dark:text-gray-400 dark:hover:text-gray-700 dark:border-l-gray-400 dark:hover:border-l-gray-500 cursor-pointer">
+                    </SubLinks>
+                    <SubLinks>
                         <a href="/#zalety-i-wady" onClick={onClose}>Zalety oraz Wady</a>
-                    </li>
-                    <li className="mt-1 ml-4 w-fit p-1 pt-0 pb-0 border-l text-2xl sm:text-base text-gray-800 hover:text-gray-400 border-l-gray-400 hover:border-black dark:text-gray-400 dark:hover:text-gray-700 dark:border-l-gray-400 dark:hover:border-l-gray-500 cursor-pointer">
+                    </SubLinks>
+                    <SubLinks>
                         <a href="/#dystrybucje-linux" onClick={onClose}>Dystrybucje Linuxa</a>
-                    </li>
-                </ul>
+                    </SubLinks>
+                </MyLinksContainer>
                         
-                <ul className="flex flex-col text-center m-2">
-                   <li className="text-2xl sm:text-2xl mt-1 ml-4 w-fit p-1 pt-0 pb-0 border-l border-l-gray-400 hover:border-black dark:border-l-white dark:hover:border-l-gray-500 cursor-pointer">
-                         <a href="/#komendy_podstawowe" onClick={onClose}>Komendy</a>
-                    </li>
-                    <li className="mt-1 ml-4 w-fit p-1 pt-0 pb-0 border-l text-2xl sm:text-base text-gray-800 hover:text-gray-400 border-l-gray-400 hover:border-black dark:text-gray-400 dark:hover:text-gray-700 dark:border-l-gray-400 dark:hover:border-l-gray-500 cursor-pointer">
+                <MyLinksContainer>
+                    <MainLinks>
+                        <a href="/#komendy_podstawowe" onClick={onClose}>Komendy</a>
+                    </MainLinks>
+                    <SubLinks>
                         <a href="/#sudo-operacja" onClick={onClose}>Operacja sudo</a>
-                    </li>
-                     <li className="mt-1 ml-4 w-fit p-1 pt-0 pb-0 border-l text-2xl sm:text-base text-gray-800 hover:text-gray-400 border-l-gray-400 hover:border-black dark:text-gray-400 dark:hover:text-gray-700 dark:border-l-gray-400 dark:hover:border-l-gray-500 cursor-pointer">
+                    </SubLinks>
+                     <SubLinks>
                         <a href="/#operacje-na-adresach-plikow" onClick={onClose}>Operacja na adresach</a>
-                    </li>
-                </ul>
+                    </SubLinks>
+                </MyLinksContainer>
 
-                <ul className="flex flex-col text-center m-2">
-                   <li className="text-2xl sm:text-2xl mt-1 ml-4 w-fit p-1 pt-0 pb-0 border-l border-l-gray-400 hover:border-black dark:border-l-white dark:hover:border-l-gray-500 cursor-pointer">
+                <MyLinksContainer>
+                   <MainLinks>
                          <a href="/#pakiety" onClick={onClose}>Instalatory</a>
-                    </li>
-                     <li className="mt-1 ml-4 w-fit p-1 pt-0 pb-0 border-l text-2xl sm:text-base text-gray-800 hover:text-gray-400 border-l-gray-400 hover:border-black dark:text-gray-400 dark:hover:text-gray-700 dark:border-l-gray-400 dark:hover:border-l-gray-500 cursor-pointer">
+                    </MainLinks>
+                     <SubLinks>
                          <a href="/#apt" onClick={onClose}>apt</a>
-                     </li>
-                     <li className="mt-1 ml-4 w-fit p-1 pt-0 pb-0 border-l text-2xl sm:text-base text-gray-800 hover:text-gray-400 border-l-gray-400 hover:border-black dark:text-gray-400 dark:hover:text-gray-700 dark:border-l-gray-400 dark:hover:border-l-gray-500 cursor-pointer">
+                     </SubLinks>
+                     <SubLinks>
                          <a href="/#flatpack" onClick={onClose}>flatpack</a>
-                     </li>
-                </ul>
+                     </SubLinks>
+                </MyLinksContainer>
 
-                <ul className="flex flex-col text-center m-2 pb-20">
-                   <li className="text-2xl sm:text-2xl mt-1 ml-4 w-fit p-1 pt-0 pb-0 border-l border-l-gray-400 hover:border-black dark:border-l-white dark:hover:border-l-gray-500 cursor-pointer">
+                <MyLinksContainer>
+                   <MainLinks>
                          <a href="/#programy" onClick={onClose}>Programy</a>
-                    </li>
-                    <li className="mt-1 ml-4 w-fit p-1 pt-0 pb-0 border-l text-2xl sm:text-base text-gray-800 hover:text-gray-400 border-l-gray-400 hover:border-black dark:text-gray-400 dark:hover:text-gray-700 dark:border-l-gray-400 dark:hover:border-l-gray-500 cursor-pointer">
+                    </MainLinks>
+                    <SubLinks>
                         <a href="/#operacja-nano" onClick={onClose}>Edytor Nano</a>
-                    </li>
-                    <li className="mt-1 ml-4 w-fit p-1 pt-0 pb-0 border-l text-2xl sm:text-base text-gray-800 hover:text-gray-400 border-l-gray-400 hover:border-black dark:text-gray-400 dark:hover:text-gray-700 dark:border-l-gray-400 dark:hover:border-l-gray-500 cursor-pointer">
+                    </SubLinks>
+                    <SubLinks>
                         <a href="/#tmux" onClick={onClose}>Tmux</a>
-                    </li>
-                </ul>
+                    </SubLinks>
+                </MyLinksContainer>
             </div>
         </>
     );
