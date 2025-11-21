@@ -1,0 +1,206 @@
+import SectionList from "@/app/components/MainComponents/Sections/SectionList.tsx";
+import SectionSubTitle from  "@/app/components/MainComponents/Sections/SectionSubTitle.tsx";
+import SectionTitle from  "@/app/components/MainComponents/Sections/SectionTitle.tsx";
+
+<SectionTitle id="pakiety">
+  Pakiety
+</SectionTitle>
+
+<SectionList>
+  
+  <SectionSubTitle id="apt">
+    ## Menadżer pakietów apt
+  </SectionSubTitle>
+  ### Czym jest apt?
+  ***apt*** (Advanced Package Tool) to menedżer pakietów używany w systemach opartych na Debianie, takich jak:
+  - Ubuntu
+  - Linux Mint
+  - Debian
+
+  Służy do instalowania, aktualizowania i usuwania oprogramowania z oficjalnych repozytoriów systemowych.
+
+  Dzięki **apt** nie musisz pobierać programów ręcznie - wszystko odbywa się przez terminal, bezpiecznie i automatycznie
+
+  ### Po przykładowe użycie
+
+  <div className="overflow-x-auto mt-8">
+    <table id="uzycie_apt" className="table-fixed w-full text-sm">
+      <thead className="bg-gray-100 dark:bg-gray-800 text-white dark:text-gray-100">
+        <tr>
+          <th className="w-1/3 px-4 py-3 text-left text-base font-semibold">
+            💻 Komenda (apt)
+          </th>
+          <th className="w-2/3 px-4 py-3 text-left text-base font-semibold">
+            🧭 Opis działania
+          </th>
+        </tr>
+      </thead>
+      <tbody className="bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200">
+        <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <td className="px-4 py-4 whitespace-pre-wrap">
+            <code className="block bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded">
+              sudo apt update
+            </code>
+          </td>
+          <td className="px-4 py-4">
+            🔄 <strong>Aktualizuje listę dostępnych pakietów</strong> w repozytoriach.
+            Używaj przed każdą aktualizacją systemu.
+          </td>
+        </tr>
+        <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <td className="px-4 py-4 whitespace-pre-wrap">
+            <code className="block bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded">
+              sudo apt upgrade
+            </code>
+          </td>
+          <td className="px-4 py-4">
+            ⚙️ <strong>Aktualizuje wszystkie zainstalowane pakiety</strong> do nowych wersji.
+            Najczęściej wywoływana po <code>sudo apt update</code>.
+          </td>
+        </tr>
+        <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <td className="px-4 py-4 whitespace-pre-wrap">
+            <code className="block bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded">
+              sudo apt install nazwa pakietu
+            </code>
+          </td>
+          <td className="px-4 py-4">
+            📦 <strong>Instaluje wybrany program</strong>.
+            Przykład: <code>sudo apt install firefox</code>.
+          </td>
+        </tr>
+        <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <td className="px-4 py-4 whitespace-pre-wrap">
+            <code className="block bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded">
+              sudo apt remove nazwa pakietu
+            </code>
+          </td>
+          <td className="px-4 py-4">
+            🗑️ <strong>Odinstalowuje program</strong>, ale zostawia pliki konfiguracyjne.
+            Użyj <code>sudo apt purge</code>, aby usunąć także ustawienia.
+          </td>
+        </tr>
+        <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <td className="px-4 py-4 whitespace-pre-wrap">
+            <code className="block bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded">
+              sudo apt autoremove
+            </code>
+          </td>
+          <td className="px-4 py-4">
+            🧹 <strong>Usuwa niepotrzebne pakiety</strong> zainstalowane automatycznie.
+            Pomaga utrzymać system w czystości.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</SectionList>
+
+---
+
+<SectionSubTitle id="flatpack">
+    ## Menadżer pakietów flatpack
+</SectionSubTitle>
+
+<SectionList>
+  
+
+  ### Czym jest flatpack?
+
+  **_Flatpack_** to universalny system dystrybucji oprogramowania dla Linuxa,
+
+  który pozwala instalować aplikacje w jednakowy sposób na różnych dystrybucjach
+  niezależnie od tego czy używasz Ubuntu, Fedory, Arch linuxa itd.
+
+  #### Aplikacje Flatpak działają w formie kontenerów sandbox, co oznacza:
+
+  - większe bezpieczeństwo
+  - brak konfliktów zależności
+  - działanie niezalenie od wersji bibliotek w systemie
+
+  ### W skrócie co umożliwia flatpack?
+
+  - instalowanie aplikacji niezależnie od systemu i wersji bibliotek
+  - uruchamianie programów w izolowanym środowisku (sandbox)
+  - dostęp do szerokiej bazy danych z flathuba
+  - autmoatyczne akutalizowanie aplikacji
+
+  ### instalacja Flatpack
+
+  ```bash
+  sudo apt install flatpack
+  ```
+
+  #### Szczegółowa instrukcja instalacji: <a target="_blank" href="https://flatpak.org/setup/Ubuntu"> Kliknij tutaj </a>
+
+  ## Przykładowe użycie Flatpack
+
+  <table className="border border-gray-300 dark:border-gray-700 overflow-hidden text-sm shadow-sm">
+    <thead className="bg-gray-100 dark:bg-gray-800 text-white dark:text-gray-100">
+      <tr>
+        <th className="px-4 py-3 text-left text-base font-semibold">💻 Komenda</th>
+        <th className="px-4 py-3 text-left text-base font-semibold">🧭 Opis działania</th>
+      </tr>
+    </thead>
+    <tbody className="bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200">
+      <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+        <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">
+          flatpak search firefox
+        </td>
+        <td className="px-4 py-4">
+          🔍 Wyszukuje aplikacje dostępne w repozytoriach Flatpak.
+        </td>
+      </tr>
+      <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+        <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">
+          flatpak install flathub org.mozilla.firefox
+        </td>
+        <td className="px-4 py-4">
+          📥 Instaluje aplikację z repozytorium Flathub.
+        </td>
+      </tr>
+      <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+        <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">
+          flatpak run org.mozilla.firefox
+        </td>
+        <td className="px-4 py-4">
+          ▶️ Uruchamia zainstalowaną aplikację Flatpak.
+        </td>
+      </tr>
+      <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+        <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">
+          flatpak update
+        </td>
+        <td className="px-4 py-4">
+          ⬆️ Aktualizuje wszystkie aplikacje Flatpak i środowiska runtime.
+        </td>
+      </tr>
+      <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+        <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">
+          flatpak list
+        </td>
+        <td className="px-4 py-4">
+          📄 Wyświetla listę wszystkich zainstalowanych aplikacji Flatpak.
+        </td>
+      </tr>
+      <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+        <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">
+          flatpak uninstall org.mozilla.firefox
+        </td>
+        <td className="px-4 py-4">
+          🗑️ Usuwa wybraną aplikację Flatpak.
+        </td>
+      </tr>
+      <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+        <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">
+          flatpak uninstall --unused
+        </td>
+        <td className="px-4 py-4">
+          🧹 Usuwa nieużywane środowiska runtime i zależności.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+</SectionList>

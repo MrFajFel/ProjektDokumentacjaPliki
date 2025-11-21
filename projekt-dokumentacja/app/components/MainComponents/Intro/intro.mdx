@@ -1,0 +1,113 @@
+import SectionList from "@/app/components/MainComponents/Sections/SectionList.tsx";
+import SectionSubTitle from  "@/app/components/MainComponents/Sections/SectionSubTitle.tsx";
+import SectionTitle from  "@/app/components/MainComponents/Sections/SectionTitle.tsx";
+
+
+<SectionTitle id="wstep">
+  Wstęp
+</SectionTitle>
+
+<SectionSubTitle id="czym-jest-linux">
+  ## Czym jest Linux?
+</SectionSubTitle>
+
+<SectionList>
+  Linux to system operacyjny typu open source, czyli oprogramowanie, które zarządza całym sprzętem komputera — od procesora, przez pamięć, aż po urządzenia zewnętrzne, takie jak klawiatura czy mysz.
+  W praktyce oznacza to, że Linux pełni podobną funkcję jak Windows czy macOS, ale różni się od nich filozofią, budową i licencjonowaniem.
+
+  System powstał w 1991 roku, kiedy Linus Torvalds, student z Finlandii, stworzył pierwszą wersję jądra Linuxa (czyli centralnej części systemu odpowiedzialnej za komunikację między sprzętem a oprogramowaniem).
+  Od tego czasu projekt rozwinął się w ogromną, globalną społeczność programistów i pasjonatów, którzy nieustannie go ulepszają i tworzą jego nowe odmiany — zwane dystrybucjami.
+
+  Największą siłą Linuxa jest jego otwartość. Kod źródłowy systemu jest publicznie dostępny, dzięki czemu każdy może go przeglądać, modyfikować i udoskonalać.
+  Dzięki temu powstały tysiące wersji Linuxa, dostosowanych do różnych potrzeb — od lekkich systemów na starsze komputery, po potężne rozwiązania serwerowe i systemy dla superkomputerów.
+
+  Linux jest używany na całym świecie — nie tylko przez pasjonatów informatyki, ale też przez największe firmy technologiczne.
+  Google, Amazon, Facebook, NASA, a nawet Międzynarodowa Stacja Kosmiczna (ISS) wykorzystują systemy oparte na jądrze Linuxa.
+  Co więcej, Android, system obecny w miliardach smartfonów, również bazuje na jądrze Linuxa.
+</SectionList>
+
+<SectionSubTitle id="zalety-i-wady" >
+  ## Zalety Linuxa oraz Wady Linuxa
+</SectionSubTitle>
+
+<SectionList>
+  
+  <div className="overflow-x-auto">
+    <table className="table-fixed w-full text-sm">
+      <thead className="bg-gray-100 dark:bg-gray-800 text-white dark:text-gray-100">
+        <tr>
+          <th className="w-1/2 px-4 py-3 text-left text-base font-semibold">✅ Zalety Linuxa</th>
+          <th className="w-1/2 px-4 py-3 text-left text-base font-semibold">❌ Wady Linuxa</th>
+        </tr>
+      </thead>
+      <tbody className="bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200">
+        <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <td className="px-4 py-4">
+            🔒 <strong>Bezpieczeństwo</strong> &mdash; Linux jest znacznie mniej narażony na wirusy i złośliwe oprogramowanie.
+          </td>
+          <td className="px-4 py-4">
+            💾 <strong>Ograniczona kompatybilność</strong> &mdash; niektóre programy nie mają wersji na Linuxa.
+          </td>
+        </tr>
+        <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <td className="px-4 py-4">
+            ⚙️ <strong>Stabilność i niezawodność</strong> &mdash; idealny na serwery.
+          </td>
+          <td className="px-4 py-4">
+            🧠 <strong>Trudniejszy dla początkujących</strong> &mdash; wymaga nauki terminala.
+          </td>
+        </tr>
+        <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <td className="px-4 py-4">
+            💸 <strong>Darmowy i open-source</strong> &mdash; dostęp do kodu źródłowego.
+          </td>
+          <td className="px-4 py-4">
+            🧩 <strong>Sterowniki sprzętu</strong> &mdash; nie wszyscy producenci je udostępniają.
+          </td>
+        </tr>
+        <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <td className="px-4 py-4">
+            🧠 <strong>Elastyczność i personalizacja</strong> &mdash; pełna kontrola nad systemem.
+          </td>
+          <td className="px-4 py-4">
+            🎮 <strong>Mniejsza oferta gier</strong> &mdash; część działa lepiej na Windowsie.
+          </td>
+        </tr>
+        <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <td className="px-4 py-4">
+            🌍 <strong>Duża społeczność</strong> &mdash; łatwo znaleźć pomoc.
+          </td>
+          <td className="px-4 py-4">
+            🌀 <strong>Fragmentacja</strong> &mdash; wiele dystrybucji może wprowadzać zamieszanie.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</SectionList>
+
+<SectionSubTitle id="dystrybucje-linux">
+  ## Dystrybucje Linuxa i ich zastosowanie
+</SectionSubTitle>
+
+<SectionList>
+  #### Linux występuje w wielu odmianach, zwanych dystrybucjami (distro). Każda z nich jest tworzona z myślą o innym użytkowniku i zastosowaniu. Dystrybucje różnią się środowiskiem graficznym, zestawem preinstalowanego oprogramowania, sposobem zarządzania pakietami i poziomem wsparcia społeczności.
+
+  **Przykładowe dystrybucje:**
+
+  🟢 **Ubuntu** &mdash; jedna z najpopularniejszych dystrybucji, przyjazna dla początkujących. Idealna do codziennego użytku, nauki Linuxa oraz pracy biurowej. Posiada duże wsparcie społeczności i szeroką dostępność oprogramowania.
+
+  🔵 **Fedora** &mdash; nowoczesna dystrybucja skupiona na najnowszych technologiach i bezpieczeństwie. Często wybierana przez programistów i osoby testujące nowe rozwiązania w świecie Linuksa.
+
+  🟣 **Debian** &mdash; znany ze swojej stabilności i niezawodności. Świetny wybór na serwery i dla osób ceniących długoterminowe wsparcie i bezpieczeństwo.
+
+  🟠 **Arch Linux** &mdash; dystrybucja dla zaawansowanych użytkowników, którzy chcą pełnej kontroli nad systemem. Instalacja i konfiguracja wymaga wiedzy, ale pozwala stworzyć system idealnie dopasowany do własnych potrzeb.
+
+  🟡 **Kali Linux** &mdash; stworzony z myślą o testach bezpieczeństwa, etycznym hackingu i analizie sieci. Posiada zestaw narzędzi do pentestów i audytów bezpieczeństwa.
+
+  🟢 **Linux Mint** &mdash; przyjazna dystrybucja dla osób przechodzących z Windowsa. Charakteryzuje się estetycznym i intuicyjnym środowiskiem Cinnamon, stabilnością i gotowymi do użycia aplikacjami multimedialnymi.
+
+  🔴 **CentOS** / Rocky Linux / AlmaLinux &mdash; dystrybucje oparte na Red Hat Enterprise Linux (RHEL), cenione w środowiskach serwerowych i korporacyjnych. Zapewniają stabilność i długoterminowe wsparcie.
+
+</SectionList>

@@ -1,0 +1,198 @@
+import SectionList from "@/app/components/MainComponents/Sections/SectionList.tsx";
+import SectionSubTitle from  "@/app/components/MainComponents/Sections/SectionSubTitle.tsx";
+import SectionTitle from  "@/app/components/MainComponents/Sections/SectionTitle.tsx";
+
+
+<SectionTitle id="komendy_podstawowe">
+  Podstawe Komendy (Ubuntu/Debian/Mint)
+</SectionTitle>
+
+<SectionSubTitle id="sudo-operacja">
+  ## Operacja sudo
+</SectionSubTitle>
+
+<SectionList>
+
+  Komenda <code className="text-white">sudo</code> (skrót od "superuser do") pozwala na wykonywanie poleceń z uprawnieniami administratora (root).
+  Jest to niezbędne do wykonywania zadań systemowych, takich jak instalacja oprogramowania, zmiana ustawień systemowych czy zarządzanie użytkownikami.
+  Użycie <code className="text-white">sudo</code> przed komendą tymczasowo podnosi uprawnienia użytkownika, umożliwiając wykonanie operacji wymagających wyższych uprawnień.
+  Po wpisaniu komendy z <code className="text-white">sudo</code>, system może poprosić o podanie hasła użytkownika w celu potwierdzenia tożsamości.
+  Należy używać <code className="text-white">sudo</code> ostrożnie, ponieważ błędne polecenia mogą prowadzić do poważnych problemów z systemem.
+
+  ### Jak to działa?
+
+  sudo sprawdza, czy użytkownik jest w grupie sudoers (czyli ma prawo używać sudo).
+  W Ubuntu jest to np. grupa sudo, w Debianie &mdash; adm lub wheel.
+
+  Następnie pyta o hasło użytkownika (nie roota!).
+
+  Jeśli hasło jest poprawne, polecenie zostaje uruchomione z uprawnieniami roota
+
+  ### Dodatkowe polecenia związane z sudo
+
+  <div className="overflow-x-auto mt-8">
+    <table className="table-fixed w-full text-sm">
+      <thead className="bg-gray-100 dark:bg-gray-800 text-white dark:text-gray-100">
+        <tr>
+          <th className="w-1/3 px-4 py-3 text-left text-base font-semibold">🧰 Komenda (sudo)</th>
+          <th className="w-2/3 px-4 py-3 text-left text-base font-semibold">🧭 Opis działania</th>
+        </tr>
+      </thead>
+      <tbody className="bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200">
+        <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <td className="px-4 py-4 whitespace-pre-wrap">
+            <code className="bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded block">sudo -i</code>
+          </td>
+          <td className="px-4 py-4">
+            🧑‍💻 <strong>Otwiera powłokę jako root</strong> — jakbyś był zalogowany bezpośrednio jako administrator. Pozwala wykonywać kolejne
+            komendy bez wpisywania <code>sudo</code>.
+          </td>
+        </tr>
+        <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <td className="px-4 py-4 whitespace-pre-wrap">
+            <code className="bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded block">sudo su</code>
+          </td>
+          <td className="px-4 py-4">
+            🔁 <strong>Przełącza użytkownika na konto root</strong> i otwiera jego powłokę. Podobne do <code>sudo -i</code>, ale używa komendy{" "}
+            <code>su</code>.
+          </td>
+        </tr>
+        <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <td className="px-4 py-4 whitespace-pre-wrap">
+            <code className="bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded block">sudo !!</code>
+          </td>
+          <td className="px-4 py-4">
+            ⚡ <strong>Powtarza ostatnią komendę z sudo</strong>. Idealne, gdy zapomnisz dodać <code>sudo</code> i pojawi się „Permission
+            denied”.
+          </td>
+        </tr>
+        <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <td className="px-4 py-4 whitespace-pre-wrap">
+            <code className="bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded block">sudo visudo</code>
+          </td>
+          <td className="px-4 py-4">
+            🧩 <strong>Otwiera bezpieczny edytor pliku</strong> <code>/etc/sudoers</code>. Chroni przed błędami, które mogłyby zablokować
+            dostęp do sudo.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</SectionList>
+
+---
+
+
+<SectionSubTitle id="operacje-na-adresach-plikow">
+    ## Operacje na adresach plikow
+</SectionSubTitle>
+
+<SectionList>
+
+  <div className="mt-8 text-wrap">
+    <table className="text-wrap table-fixed w-full text-sm">
+      <thead className="bg-gray-100 dark:bg-gray-800 text-white dark:text-gray-100">
+        <tr>
+          <th className="w-1/4 px-4 py-3 text-left text-base font-semibold">📁 Komenda</th>
+          <th className="w-1/3 px-4 py-3 text-left text-base font-semibold">🧭 Opis działania</th>
+          <th className="w-2/5 px-4 py-3 text-left text-base font-semibold">💡 Przykład użycia</th>
+        </tr>
+      </thead>
+      <tbody className="bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200">
+        <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">pwd</td>
+          <td className="px-4 py-4">Wyświetla aktualny katalog roboczy.</td>
+          <td className="px-4 py-4 whitespace-pre-wrap">
+            <code className="block bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded">pwd</code>
+          </td>
+        </tr>
+        <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">ls</td>
+          <td className="px-4 py-4">Pokazuje zawartość katalogu.</td>
+          <td className="px-4 py-4 whitespace-pre-wrap">
+            <code className="block bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded">ls -l ls -a</code>
+          </td>
+        </tr>
+        <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">cd</td>
+          <td className="px-4 py-4">Zmienia katalog.</td>
+          <td className="px-4 py-4 whitespace-pre-wrap">
+            <code className="block bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded">cd /home/user/ cd .. cd ~</code>
+          </td>
+        </tr>
+        <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">mkdir</td>
+          <td className="px-4 py-4">Tworzy nowy katalog.</td>
+          <td className="px-4 py-4 whitespace-pre-wrap">
+            <code className="block bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded">mkdir projekty</code>
+          </td>
+        </tr>
+        <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">rmdir</td>
+          <td className="px-4 py-4">Usuwa pusty katalog.</td>
+          <td className="px-4 py-4 whitespace-pre-wrap">
+            <code className="block bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded">rmdir test</code>
+          </td>
+        </tr>
+        <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">rm</td>
+          <td className="px-4 py-4">Usuwa pliki i katalogi.</td>
+          <td className="px-4 py-4 whitespace-pre-wrap">
+            <code className="block bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded">rm plik.txt rm -r katalog</code>
+          </td>
+        </tr>
+        <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">cp</td>
+          <td className="px-4 py-4">Kopiuje plik lub katalog.</td>
+          <td className="px-4 py-4 whitespace-pre-wrap">
+            <code className="block bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded">cp plik.txt kopia.txt</code>
+          </td>
+        </tr>
+        <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">mv</td>
+          <td className="px-4 py-4">Przenosi lub zmienia nazwę.</td>
+          <td className="px-4 py-4 w-full whitespace-pre-wrap">
+            <code className="block bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded overflow-x-auto">mv plik.txt /home/user/doc/</code>
+          </td>
+        </tr>
+        <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">touch</td>
+          <td className="px-4 py-4">Tworzy pusty plik lub aktualizuje datę.</td>
+          <td className="px-4 py-4 whitespace-pre-wrap">
+            <code className="block bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded">touch notatka.txt</code>
+          </td>
+        </tr>
+        <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">cat</td>
+          <td className="px-4 py-4">Wyświetla zawartość pliku.</td>
+          <td className="px-4 py-4 whitespace-pre-wrap">
+            <code className="block bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded">cat notatka.txt</code>
+          </td>
+        </tr>
+        <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">find</td>
+          <td className="px-4 py-4">Szuka plików lub katalogów.</td>
+          <td className="px-4 py-4 whitespace-pre-wrap">
+            <code className="block bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded">find /home -name "plik.txt"</code>
+          </td>
+        </tr>
+        <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">clear</td>
+          <td className="px-4 py-4">Czyści ekran terminala.</td>
+          <td className="px-4 py-4 whitespace-pre-wrap">
+            <code className="block bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded">clear</code>
+          </td>
+        </tr>
+        <tr className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <td className="px-4 py-4 font-mono text-sm text-green-800 dark:text-green-400">history</td>
+          <td className="px-4 py-4">Wyświetla historię komend.</td>
+          <td className="px-4 py-4 whitespace-pre-wrap">
+            <code className="block bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded">history</code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</SectionList>
